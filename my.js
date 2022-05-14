@@ -24,6 +24,14 @@
 // let num = (!!('hello 22'));
 // console.log( typeof num);
 
-const bool = new Boolean(false);
-if (bool) console.log(bool);
-if (bool != false) console.log(bool);
+// const bool = new Boolean(false);
+// if (bool) console.log(bool);
+// if (bool != false) console.log(bool);
+
+let answer = confirm('Сколько тебе лет?');
+if (answer == true) {
+    alert('Проходи');
+} else if (answer == false) {
+    alert('Доступ закрыт');
+}
+console.log(answer);
