@@ -1,33 +1,34 @@
 'use strict';
-let location1 = 3; 
-let location2 = 4;
-let location3 = 5;
+let title = prompt('как называется ваш проект?');
+let screens = prompt("Какие типы экранов нужно разработать?","Простые,Сложные,Интерактивные.");
+let screenPrice = +prompt("стоимость работы?","1000,2000 т.р?");
+let rollback = 50;
+let adaptive = confirm("нужен адаптив?");
 
-let quess;
-//console.log(quess);
-let hits = 0;
-let quesses = 0;
-let isSink = false;
+let service1 = prompt("Дополнительный тип услуг?");
+let servicePrice1 = +prompt("Какая стоимость","1000");
+let service2 = prompt("Нужны еще услуги?");
+let servicePrice2 = +prompt("Сколько доплатить?");
+let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
 
-while (isSink == false) {
-    guess = prompt("Ready, aim, fire! (enter a number from 0-6):");
-    if (guess < 0 || guess > 6) {
-    alert("Please enter a valid cell number!");
-    } else {
-    guesses = guesses + 1;
-    if (guess == location1 || guess == location2 || guess == location3) {
-    alert("HIT!");
-    hits = hits + 1;
-    if (hits == 3) {
-    isSink = true;
-    alert("You sank my battleship!");
-    }
-    } else {
-    alert("MISS");
-    }
-    }
-    }
-    let stats = "You took " + guesses + " guesses to sink the battleship, " +
-    "which means your shooting accuracy was " + (3/guesses);
-    alert(stats);
+let servicePercentPrice = fullPrice - (fullPrice*(rollback/100));
+
+if(fullPrice >= 30000) {
+    alert('Даем скидку 10%');
+} else if (fullPrice >= 15000 && fullPrice < 30000) {
+    alert('Даем скидку 5%');
+} else if (fullPrice > 0 && fullPrice < 15000) {
+    alert('Скидка не предусмотрена!');
+} else if (fullPrice < 0) 
+    alert('чтото пошло не так!');
+
+
+console.log(title);
+console.log(fullPrice);
+console.log(adaptive);
+console.log(screens.toLowerCase());
+console.log(fullPrice*(rollback/100));
+console.log(screens.length);
+console.log(screenPrice);
+console.log(Math.ceil(servicePercentPrice));
