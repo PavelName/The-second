@@ -1,0 +1,54 @@
+h1 {
+color:brown;
+font-size: 100px;
+background-color: blueviolet;
+background-image:linear-gradient(yellow, green);
+}
+.leaf-top-left {
+    background-image: linear-gradient(135deg, #ff0000, #000000);
+  }
+  
+  .leaf-top-right {
+    background-image: linear-gradient(225deg, #00ff00, #000000);
+    /*градиент от #00ff00 к #000000*/
+  }
+  
+  .leaf-bottom-right {
+    background-image: linear-gradient(315deg,  #ffff00, #000000);
+    /*градиент от #ffff00 к #000000*/
+  }
+  
+  .leaf-bottom-left {
+    background-image: linear-gradient(45deg, #ff00ff, #000000);
+    /*градиент от #ff00ff к #000000*/
+  }
+  
+  .leaf-top-left,
+  .leaf-bottom-right {
+    border-radius: 0 50%;
+  }
+  
+  .leaf-top-right,
+  .leaf-bottom-left {
+    border-radius: 50% 0;
+  }
+  
+  .leaf {
+    float: left;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #dfdfdf;
+  }
+  
+  .flower {
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 300px;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
