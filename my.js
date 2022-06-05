@@ -55,13 +55,13 @@ const getTitle = function () {
 const getRollbackMessage = function() {
 
 if(fullPrice >= 30000) {
-    alert('Даем скидку 10%');
+  return('Даем скидку 10%');
 } else if (fullPrice >= 15000 && fullPrice < 30000) {
-    alert('Даем скидку 5%');
+    return('Даем скидку 5%');
 } else if (fullPrice >= 0 && fullPrice < 15000) {
-    alert('Скидка не предусмотрена!');
+    return('Скидка не предусмотрена!');
 } else if (fullPrice < 0) 
-    alert('чтото пошло не так!');
+    return('чтото пошло не так!');
 }
 
 asking();
