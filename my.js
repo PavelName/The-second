@@ -1,4 +1,5 @@
 'use strict';
+
 let title  
 let screens 
 let screenPrice  
@@ -10,6 +11,20 @@ let fullPrice;
 let servicePercentPrice;
 let service1 
 let service2 
+
+const appData = {
+     title: '', 
+     screens:'',
+     screenPrice: 0, 
+     adaptive: true, 
+    
+     rollback: 15,
+     allServicePrices: 0,
+     fullPrice: 0,
+     servicePercentPrice: 0,
+     service1:'', 
+     service2:''  
+}
 
 const isNumber = function(num) {
     return !isNaN(parseFloat(num)) && isFinite(num)
@@ -39,9 +54,8 @@ const getAllServicePrices = function() {
     return sum
     // return servicePrice1+ servicePrice2
 }
-const showTypeOf = function (variable) {
-    console.log(variable,typeof variable);
-}
+
+
 const getFullPrice = function() {
     return screenPrice + allServicePrices
 }
@@ -70,9 +84,7 @@ fullPrice = getFullPrice();
 servicePercentPrice = getAllServicePrices(); 
 title = getTitle();
 
-showTypeOf(title);
-showTypeOf(screenPrice);
-showTypeOf(adaptive);
+
 
 console.log("allServicePrices",allServicePrices);
 console.log(getRollbackMessage(fullPrice));
