@@ -61,3 +61,19 @@ background-image:linear-gradient(yellow, green);
   header {
     background-color: #00ff00;
   }
+  li {
+    display: inline;
+  }
+  a:hover {
+    color: rgb(26, 179, 95);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+  }
+  a {
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+  }
